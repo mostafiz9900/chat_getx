@@ -13,13 +13,14 @@ import 'package:uuid/uuid.dart';
 class MyChatController extends GetxController {
   // var messagesObj = <types.Message>[];
   var messagesObj = <types.Message>[].obs;
-  List<types.Message> get msg=>messagesObj.value;
+  List<types.Message> get msg => messagesObj.value;
   final user = const types.User(id: '06c33e8b-e835-4736-80f4-63f44b66666c');
   final user2 =
       const types.User(id: '06c33e8b-e835-4736-80f4-63f44b66666cdddd');
   @override
   void onInit() {
     super.onInit();
+    loadMessages();
   }
 
   @override
