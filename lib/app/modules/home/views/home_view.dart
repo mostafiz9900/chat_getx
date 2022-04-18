@@ -1,3 +1,4 @@
+import 'package:chat_getx/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,9 +14,20 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'HomeView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed(Routes.MY_CHAT);
+                },
+                child: Text('Go To Chat'))
+          ],
         ),
       ),
     );
